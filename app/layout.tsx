@@ -50,14 +50,18 @@ export default function RootLayout({
           async
           defer
         />
-        <script>
-  window.pixelId = "672a7303b4e826a8b70da439";
-  var a = document.createElement("script");
-  a.setAttribute("async", "");
-  a.setAttribute("defer", "");
-  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
-  document.head.appendChild(a);
-</script>
+        
+        {/* Pixel Script */}
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            window.pixelId = "672a7303b4e826a8b70da439";
+            var a = document.createElement("script");
+            a.setAttribute("async", "");
+            a.setAttribute("defer", "");
+            a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+            document.head.appendChild(a);
+          `
+        }} />
 
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
@@ -65,4 +69,4 @@ export default function RootLayout({
       </body>
     </html>
   );
-} 
+}
