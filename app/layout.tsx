@@ -74,6 +74,16 @@ export default function RootLayout({
             src="https://www.facebook.com/tr?id=547626754554260&ev=PageView&noscript=1"
           />
         </noscript>
+
+        <script>
+  window.pixelId = "672a7303b4e826a8b70da439";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Providers>{children}</Providers>
